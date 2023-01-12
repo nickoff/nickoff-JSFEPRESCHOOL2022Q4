@@ -265,11 +265,13 @@ h1, h2, h3, p, ul, li {
   height: 450px;
 }
 
-.service-item-img {
+.service-item-img img{
   display: flex;
   flex-direction: column;
   width: 329px;
   height: 350px;
+  object-fit: cover;
+  object-position: 50% 50%;
   border-radius: 20px 20px 0px 0px;
 }
 
@@ -700,6 +702,8 @@ transition: .5s;
       flex-direction: column;
       width: 280px;
       height: 350px;
+      object-fit: cover;
+      object-position: 50% 50%;
       border-radius: 20px 20px 0px 0px;
       overflow: scroll;
     }
