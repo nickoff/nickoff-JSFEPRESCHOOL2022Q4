@@ -1027,21 +1027,30 @@ transition: .5s;
     padding: 0px 26px 0 20px;
     margin-top: 80px;
   }
-  
-  .contacts-action-btn {
-    width: 16px;
-    height: 16px;
-    background-image: url('./assets/img/accordion_btn-2.svg');
+
+  .footer {
+    padding-top: 22px;
+    padding-bottom: 7px;
   }
   
-  .contacts-item-text {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 40px;
-    letter-spacing: 0.05em;
-    color: #717171;
+  .footer-wrapper {
+    height: 117px;
+  }
+
+  .footer-git {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 173px;
+    height: 24px;
+    line-height: 24px;
+    text-decoration: none;
+  }
+
+  .footer-link-rss {
+    line-height: 24.2px;
+    margin-left: 0px;
+    margin-top: 10px;
   }
 
   
