@@ -794,7 +794,7 @@ transition: .5s;
     padding-top: 36px;
     padding-bottom: 36px;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 21px;
   }
 
@@ -807,9 +807,72 @@ transition: .5s;
   .header-wrapper {
     height: 24px;
   }
+
+  .gamburger-btn {
+    width: 40px;
+    height: 24px;
+    position: absolute;
+    left: 315px;
+    top: 34px;
+    z-index: 2;
+  }
+
+  .gamburger-btn span {
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #717171;
+    transition: 0.5s;
+  }
+
+  .gamburger-btn span:nth-of-type(2) {
+    top: 8px;
+  }
+
+  .gamburger-btn span:nth-of-type(3) {
+    top: 16px;
+  }
+
+  .gamburger-btn span:nth-of-type(4) {
+    top: 24px;
+  }
+
+  .gamburger-btn.activ span:first-of-type {
+    top: calc(50% + 0.5px);
+    transform: translate(-50%) rotate(45deg);
+  }
+
+  .gamburger-btn.activ span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .gamburger-btn.activ span:nth-of-type(3) {
+    opacity: 0;
+  }
+
+  .gamburger-btn.activ span:nth-of-type(4) {
+    top:  calc(50% - 0.5px);
+    transform: translate(-50%) rotate(-45deg);
+  }
   
   .nav-header {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 66%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #D6E7D2;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+
+  .nav-header.activ {
+    transform: translateX(0);
   }
 
   .welcom {
@@ -975,7 +1038,7 @@ transition: .5s;
   }
   .price-call-us-title {
     max-width: 230px;
-    margin-top: 19px;
+    margin-top: 0px;
     font-size: 20px;
     line-height: 35px;
     text-align: center;
@@ -1052,6 +1115,4 @@ transition: .5s;
     margin-left: 0px;
     margin-top: 10px;
   }
-
-  
 }
