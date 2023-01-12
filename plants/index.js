@@ -1,3 +1,18 @@
-console.log(
-    "Всего: 94\n1. Вёрстка валидная +10\n2. Вёрстка семантическая +14\n3. Вёрстка соответствует макету +48\n4. Требования к css + 12\n5. Интерактивность, реализуемая через css +10"
-    )
+let gamburgerBtn = document.querySelector('.gamburger-btn');
+let navMenu = document.querySelector('.nav-header');
+let body = document.querySelector('.about');
+
+gamburgerBtn.addEventListener('click', function() {
+    gamburgerBtn.classList.toggle('activ');
+    navMenu.classList.toggle('activ')
+});
+
+navMenu.addEventListener('click', function() {
+    gamburgerBtn.classList.remove('activ');
+    navMenu.classList.remove('activ');
+});
+
+body.addEventListener('click', function() {
+    gamburgerBtn.classList.remove('activ');
+    navMenu.classList.remove('activ');
+});
