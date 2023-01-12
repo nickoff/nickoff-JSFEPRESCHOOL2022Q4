@@ -65,6 +65,7 @@ h1, h2, h3, p, ul, li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   height: 50px;
   width: 452px;
   padding-inline-start: 0;
@@ -207,9 +208,9 @@ h1, h2, h3, p, ul, li {
 .service-title {
   display: flex;
   justify-content: space-between;
-  width: 1007px;
   height: 94px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .service-title-text {
@@ -220,13 +221,13 @@ h1, h2, h3, p, ul, li {
   font-weight: 400;
   font-size: 40px;
   line-height: 52px;
+  margin-right: 142px;
   color: #499A18;
 }
 
 .service-button-list {
-  width: 559px;
-  height: 50px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -235,7 +236,7 @@ h1, h2, h3, p, ul, li {
   display: flex;
   justify-content: space-between;
   align-content: space-between;
-  width: 1222px;
+  width: 100%;
   height: 955px;
   margin-top: 90px;
   flex-wrap: wrap;
@@ -252,6 +253,7 @@ h1, h2, h3, p, ul, li {
   font-weight: 400;
   line-height: 26px;
   color: #E06733;
+  margin-right: 38px;
 }
 
 .service-btn:hover {
@@ -308,6 +310,7 @@ h1, h2, h3, p, ul, li {
 .price-wrapper {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   height: 405px;
 }
 
@@ -365,14 +368,16 @@ h1, h2, h3, p, ul, li {
 }
 
 .price-call-us {
-  width: 452px;
+  max-width: 452px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+
 }
 
 .price-call-us-title {
+  max-width: 452px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -543,12 +548,7 @@ transition: .5s;
   }
 
   .nav-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 47px;
-    width: 452px;
-    padding-inline-start: 0;
     }
 
     .welcom {
@@ -636,24 +636,16 @@ transition: .5s;
     
     .about-text-title {
       height: 102px;
-      font-family: "Inika", serif;
-      font-style: normal;
       font-weight: 400;
       font-size: 35px;
       line-height: 45.6px;
       text-align: center;
-      color: #499A18;
       margin-bottom: 0px;
-    }
-    
-    .text-orange {
-      color: #E06733;
     }
     
     .about-image {
       width: 250px;
       height: 258px;
-      background-image: url('./assets/img/houseplant\ 1.png');
       background-size: cover;
     }
 
@@ -683,10 +675,6 @@ transition: .5s;
     }
 
     .service-list {
-      display: flex;
-      justify-content: space-between;
-      align-content: space-between;
-      width: 100%;
       height: 1426px;
       margin-top: 40px;
       flex-wrap: wrap;
@@ -731,6 +719,7 @@ transition: .5s;
     }
 
     .price-call-us-title {
+      max-width: 296px;
       margin-top: 100px;
       font-size: 25px;
       line-height: 35px;
@@ -798,4 +787,195 @@ transition: .5s;
       margin-left: 0px;
     }
 
+}
+
+@media (max-width: 380px) {
+  .header {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .container {
+    max-width: 380px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .header-wrapper {
+    height: 24px;
+  }
+  
+  .nav-header {
+    display: none;
+  }
+
+  .welcom {
+    padding-top: 24px;
+    padding-bottom: 24px;  
+  }
+
+  .welcom-image {
+    display: none;
+  }
+
+  .welcom-text-box {
+    height: 252px;
+    width: 100%;
+  }
+
+  .welcom-text {
+    padding-left: 0px;
+  }
+
+  .welcom-text-title {
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 0px;
+  }
+
+  .btn-welcom {
+    width: 100px;
+    height: 34.14px;
+    margin-top: 0px;
+    font-size: 10px;
+    line-height: 20px
+  }
+
+  .about {
+    padding-top: 30px;
+    padding-bottom: 31px;
+  }
+  
+  .about-wrapper {
+    height: 455px;
+  }
+  
+  .about-text-box {
+    width: 100%;
+    height: 308px;
+    margin-top: 0px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 0px;
+  }
+
+  .about-text {
+    height: 100%;
+  }
+
+  .about-text-title {
+    width: 100%;
+    height: 57.74px;
+    font-size: 25px;
+    line-height: 32.57px;
+    margin-bottom: 21.55px;
+  }
+  
+  .about-image {
+    width: 150px;
+    height: 147px;
+    background-size: cover;
+  }
+
+  .service {
+    padding-top: 30px;
+    padding-bottom: 27px;
+  }
+
+  .service-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 252px;
+    height: 183px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .service-title-text {
+    width: 187px;
+    height: 69px;
+    font-size: 25px;
+    line-height: 33px;
+  }
+
+  .service-btn {
+    width: 121px;
+    height: 35px;
+    font-size: 15px;
+    line-height: 20px;
+    margin-right: 0px;
+  }
+
+  .service-button-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 79px;
+  }
+
+  .service-list {
+    justify-content: center;
+    align-content: space-between;
+    height: 2870px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+
+  .price {
+    padding-top: 25px;
+    padding-bottom: 40px;
+  }
+  
+  .price-wrapper {
+    height: 447px;
+    align-items: center;
+  }
+
+  .price-text {
+    align-items: center;
+  }
+  
+  .price-title {
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .prices-item {
+    width: 224px;
+    height: 235px;
+    margin-top: 37px;
+    padding: 29px 22px 29px 22px;
+  }
+  
+  .price-item {
+    width: 100%;
+    height: 49.72px;
+    padding: 0px 40px 0 30px;
+  }
+  
+  .price-item-text {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .price-call-us-title {
+    max-width: 296px;
+    margin-top: 100px;
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .price-btn {
+    margin-bottom: 8px;
+
+  }
+
+  
 }
