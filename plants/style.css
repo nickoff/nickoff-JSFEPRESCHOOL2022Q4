@@ -139,6 +139,7 @@ h1, h2, h3, p, ul, li {
   font-size: 16px;
   font-weight: 400;
   color: #000000;
+  cursor: pointer;
 }
 
 .btn-welcom:hover {
@@ -254,6 +255,7 @@ h1, h2, h3, p, ul, li {
   line-height: 26px;
   color: #E06733;
   margin-right: 38px;
+  cursor: pointer;
 }
 
 .service-btn:hover {
@@ -350,6 +352,7 @@ h1, h2, h3, p, ul, li {
   background: #EDF2EC;
   border-radius: 20px;
   padding: 0px 40px 0 40px;
+  cursor: pointer;
 }
 
 .price-item-text {
@@ -399,6 +402,7 @@ h1, h2, h3, p, ul, li {
   line-height: 26px;
   color: #E06733;
   background-color: white;
+  cursor: pointer;
 }
 
 .price-btn:hover {
@@ -451,6 +455,7 @@ transition: .5s;
   border-radius: 0px;
   padding: 0px 35px 0 20px;
   margin-top: 95px;
+  cursor: pointer;
 }
 
 .contacts-action-btn {
@@ -812,7 +817,7 @@ transition: .5s;
     width: 40px;
     height: 24px;
     position: absolute;
-    left: 315px;
+    left: calc(100vw - 65px);
     top: 34px;
     z-index: 2;
   }

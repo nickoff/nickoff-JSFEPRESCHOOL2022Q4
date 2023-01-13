@@ -16,3 +16,8 @@ body.addEventListener('click', function() {
     gamburgerBtn.classList.remove('activ');
     navMenu.classList.remove('activ');
 });
+
+window.addEventListener('scroll', function() {
+    gamburgerBtn.classList.remove('activ');
+    navMenu.classList.remove('activ');
+  });
