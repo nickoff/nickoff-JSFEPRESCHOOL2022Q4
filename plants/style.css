@@ -67,13 +67,13 @@ h1, h2, h3, p, ul, li {
   align-items: center;
   flex-wrap: wrap;
   height: 50px;
-  width: 452px;
   padding-inline-start: 0;
   }
 
 .nav-item {
   list-style-type: none;
   text-decoration: none;
+  margin-left: 46px;
 }
 
 .nav-item-link {
@@ -211,7 +211,7 @@ h1, h2, h3, p, ul, li {
   justify-content: space-between;
   height: 94px;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: unset;
 }
 
 .service-title-text {
@@ -640,6 +640,7 @@ transition: .5s;
     }
     
     .about-text-title {
+      width: 100%;
       height: 102px;
       font-weight: 400;
       font-size: 35px;
@@ -743,6 +744,8 @@ transition: .5s;
       flex-direction: column;
       height: 699px;
       align-items: center;
+      padding-left: 16%;
+      padding-right: 16%;
     }
     
     .contacts-img {
@@ -760,6 +763,7 @@ transition: .5s;
     }
 
     .contacts-list {
+      width: 100%;
       margin-top: 0px;
     }
 
