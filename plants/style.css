@@ -258,6 +258,12 @@ h1, h2, h3, p, ul, li {
   cursor: pointer;
 }
 
+.on-btn {
+  background-color: #E06733;
+  color: #ffffff;
+  transition: .5s;
+}
+
 .service-btn:hover {
   background-color: #E06733;
   color: #ffffff;
@@ -277,6 +283,12 @@ h1, h2, h3, p, ul, li {
   object-fit: cover;
   object-position: 50% 50%;
   border-radius: 20px 20px 0px 0px;
+  transition: 0.5s;
+}
+
+.blur {
+  filter: blur(2px);
+  transition: 0.5s;
 }
 
 .service-item-description {
