@@ -367,6 +367,11 @@ h1, h2, h3, p, ul, li {
   cursor: pointer;
 }
 
+.price-item:hover {
+  background:#D6E7D2;
+  transition: .5s;
+}
+
 .price-item-text {
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -468,6 +473,13 @@ transition: .5s;
   padding: 0px 35px 0 20px;
   margin-top: 95px;
   cursor: pointer;
+}
+
+.contacts-list:hover {
+  background: #C1E698;
+  border: 1px solid #D6E7D2;
+  box-shadow: none;
+  transition: .5s;
 }
 
 .contacts-action-btn {
