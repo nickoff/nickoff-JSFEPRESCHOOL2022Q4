@@ -2,6 +2,15 @@ let gamburgerBtn = document.querySelector('.gamburger-btn');
 let navMenu = document.querySelector('.nav-header');
 let body = document.querySelector('.about');
 let serviceBtn = document.querySelectorAll('.service-btn');
+
+const priceBtn = document.querySelectorAll('.price-item');
+const priceBasic = priceBtn[0];
+const priceStandard = priceBtn[1];
+const pricePro = priceBtn[2]
+const basicsAccordion = document.querySelector('.basic');
+const standardAccordion = document.querySelector('.standard');
+const proAccordion = document.querySelector('.pro-care');
+
 const gardenBtn = serviceBtn[0];
 const lawnBtn = serviceBtn[1];
 const plantingBtn = serviceBtn[2];
@@ -26,6 +35,53 @@ function plantingBlurOff () {serviceImgPlanting.forEach(img => img.classList.rem
 function statusGardenBlur () {return document.querySelectorAll('.garden')[0].classList.contains('blur')};
 function statusLawnBlur () {return document.querySelectorAll('.lawn')[0].classList.contains('blur')};
 function statusPlantingBlur () {return document.querySelectorAll('.planting')[0].classList.contains('blur')};
+
+function priceBasicOpen () {
+    priceBasic.classList.remove('price-item-close');
+    priceBasic.classList.add('price-item-open');
+    document.querySelectorAll('.action-btn')[0].classList.remove('action-btn-close');
+    document.querySelectorAll('.action-btn')[0].classList.add('action-btn-opened');
+    document.getElementById('basics').innerHTML = '<hr><p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p><p><span class="price-dollar">$</span><span class="price-orange-text">15</span><span class="price-per-hour"> / per hour</span></p><button onclick="window.location.href=\'#contacts\'\;" class="price-item-btn">Order</button>';}; 
+
+function priceBasicClose () {
+    priceBasic.classList.add('price-item-close');
+    priceBasic.classList.remove('price-item-open');
+    document.querySelectorAll('.action-btn')[0].classList.remove('action-btn-opened');
+    document.querySelectorAll('.action-btn')[0].classList.add('action-btn-close');
+    document.getElementById('basics').innerHTML = '';
+}
+
+function priceStandardOpen () {
+    priceStandard.classList.remove('price-item-close');
+    priceStandard.classList.add('price-item-open');
+    document.querySelectorAll('.action-btn')[1].classList.remove('action-btn-close');
+    document.querySelectorAll('.action-btn')[1].classList.add('action-btn-opened');
+    document.getElementById('standard').innerHTML = '<hr><p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p><p><span class="price-dollar">$</span><span class="price-orange-text">25</span><span class="price-per-hour"> / per hour</span></p><button onclick="window.location.href=\'#contacts\'\;" class="price-item-btn">Order</button>';}; 
+
+function priceStandardClose () {
+    priceStandard.classList.add('price-item-close');
+    priceStandard.classList.remove('price-item-open');
+    document.querySelectorAll('.action-btn')[1].classList.remove('action-btn-opened');
+    document.querySelectorAll('.action-btn')[1].classList.add('action-btn-close');
+    document.getElementById('standard').innerHTML = '';   
+}
+
+
+function priceProOpen () {
+    pricePro.classList.remove('price-item-close');
+    pricePro.classList.add('price-item-open');
+    document.querySelectorAll('.action-btn')[2].classList.remove('action-btn-close');
+    document.querySelectorAll('.action-btn')[2].classList.add('action-btn-opened');
+    document.getElementById('pro-care').innerHTML = '<hr><p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p><p><span class="price-dollar">$</span><span class="price-orange-text">35</span><span class="price-per-hour"> / per hour</span></p><button onclick="window.location.href=\'#contacts\'\;" class="price-item-btn">Order</button>';}; 
+
+function priceProClose () {
+    pricePro.classList.add('price-item-close');
+    pricePro.classList.remove('price-item-open');
+    document.querySelectorAll('.action-btn')[2].classList.remove('action-btn-opened');
+    document.querySelectorAll('.action-btn')[2].classList.add('action-btn-close');
+    document.getElementById('pro-care').innerHTML = '';   
+}
+
 
 gardenBtn.addEventListener('click', (event) => {
     if (statusGardenBtn()) {
@@ -80,6 +136,34 @@ plantingBtn.addEventListener('click', (event) => {
         }
     };
 });
+
+basicsAccordion.addEventListener('click', (event) => {
+    if (document.querySelectorAll('.price-item')[0].classList.contains('price-item-close')) {
+        priceBasicOpen ();
+        priceStandardClose();
+        priceProClose();
+    }
+    else {priceBasicClose();}
+})
+
+standardAccordion.addEventListener('click', (event) => {
+    if (document.querySelectorAll('.price-item')[1].classList.contains('price-item-close')) { 
+        priceStandardOpen();
+        priceBasicClose();
+        priceProClose();
+    }
+    else {priceStandardClose();}
+})
+
+proAccordion.addEventListener('click', (event) => {
+    if (document.querySelectorAll('.price-item')[2].classList.contains('price-item-close')) { 
+        priceProOpen();
+        priceBasicClose();
+        priceStandardClose();
+    }
+    else {priceProClose();}
+})
+
 
 
 gamburgerBtn.addEventListener('click', function() {
