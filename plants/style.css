@@ -82,7 +82,7 @@ h1, h2, h3, p, ul, li {
 }
 
 .nav-item-link:hover {
- 
+  cursor: pointer;
   color: #E06733;
   font-weight: 700;
   transition: .5s;
@@ -143,6 +143,7 @@ h1, h2, h3, p, ul, li {
 }
 
 .btn-welcom:hover {
+  cursor: pointer;
   background-color: #E06733;
   color: #ffffff;
   transition: .5s;
