@@ -41,14 +41,17 @@ function priceBasicOpen () {
     priceBasic.classList.add('price-item-open');
     document.querySelectorAll('.action-btn')[0].classList.remove('action-btn-close');
     document.querySelectorAll('.action-btn')[0].classList.add('action-btn-opened');
-    document.getElementById('basics').innerHTML = '<hr><p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p><p><span class="price-dollar">$</span><span class="price-orange-text">15</span><span class="price-per-hour"> / per hour</span></p><button onclick="window.location.href=\'#contacts\'\;" class="price-item-btn">Order</button>';}; 
+    document.getElementById('basics').innerHTML = '<hr><p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p><p><span class="price-dollar">$</span><span class="price-orange-text">15</span><span class="price-per-hour"> / per hour</span></p><button onclick="window.location.href=\'#contacts\'\;" class="price-item-btn">Order</button>';
+    document.getElementById('basics').classList.add('price-open');
+} 
 
 function priceBasicClose () {
     priceBasic.classList.add('price-item-close');
     priceBasic.classList.remove('price-item-open');
     document.querySelectorAll('.action-btn')[0].classList.remove('action-btn-opened');
     document.querySelectorAll('.action-btn')[0].classList.add('action-btn-close');
-    document.getElementById('basics').innerHTML = '';
+    document.getElementById('basics').classList.remove('price-open');
+    //document.getElementById('basics').innerHTML = '';
 }
 
 function priceStandardOpen () {
@@ -56,6 +59,7 @@ function priceStandardOpen () {
     priceStandard.classList.add('price-item-open');
     document.querySelectorAll('.action-btn')[1].classList.remove('action-btn-close');
     document.querySelectorAll('.action-btn')[1].classList.add('action-btn-opened');
+    document.getElementById('standard').classList.add('price-open');    
     document.getElementById('standard').innerHTML = '<hr><p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p><p><span class="price-dollar">$</span><span class="price-orange-text">25</span><span class="price-per-hour"> / per hour</span></p><button onclick="window.location.href=\'#contacts\'\;" class="price-item-btn">Order</button>';}; 
 
 function priceStandardClose () {
@@ -63,7 +67,8 @@ function priceStandardClose () {
     priceStandard.classList.remove('price-item-open');
     document.querySelectorAll('.action-btn')[1].classList.remove('action-btn-opened');
     document.querySelectorAll('.action-btn')[1].classList.add('action-btn-close');
-    document.getElementById('standard').innerHTML = '';   
+    document.getElementById('standard').classList.remove('price-open');
+    //document.getElementById('standard').innerHTML = '';   
 }
 
 
@@ -72,6 +77,7 @@ function priceProOpen () {
     pricePro.classList.add('price-item-open');
     document.querySelectorAll('.action-btn')[2].classList.remove('action-btn-close');
     document.querySelectorAll('.action-btn')[2].classList.add('action-btn-opened');
+    document.getElementById('pro-care').classList.add('price-open');
     document.getElementById('pro-care').innerHTML = '<hr><p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p><p><span class="price-dollar">$</span><span class="price-orange-text">35</span><span class="price-per-hour"> / per hour</span></p><button onclick="window.location.href=\'#contacts\'\;" class="price-item-btn">Order</button>';}; 
 
 function priceProClose () {
@@ -79,7 +85,8 @@ function priceProClose () {
     pricePro.classList.remove('price-item-open');
     document.querySelectorAll('.action-btn')[2].classList.remove('action-btn-opened');
     document.querySelectorAll('.action-btn')[2].classList.add('action-btn-close');
-    document.getElementById('pro-care').innerHTML = '';   
+    document.getElementById('pro-care').classList.remove('price-open');
+    //document.getElementById('pro-care').innerHTML = '';   
 }
 
 
